@@ -1,0 +1,99 @@
+/* styles/login.css */
+
+/* Overall body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Hide scrollbar */
+}
+
+h1{
+   font-family: 'Playfair Display';font-size: 32px;
+   text-align: center;
+   color: #00001a;
+}
+
+h2{
+  font-family: 'Playfair Display';font-size: 24px;
+  text-align: center;
+}
+
+/* Container for the background image */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://imgs.search.brave.com/nOD9sPHj6erimnIah5KsKmRvUr3Wrhcc1v9Y2nHlMIs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdm/cmUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9QYWRsb2NrLTEt/NzQyeDEwMjQucG5n') no-repeat center center;
+  background-size: fit; 
+  filter: blur(4px); 
+  z-index: -1; 
+}
+
+/* Style for the login form container */
+form {
+  position: absolute; /* Position it in relation to the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the form */
+  width: 100%;
+  max-width: 400px; 
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+
+/* Style for form elements */
+form div {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Playfair Display';font-size: 20px;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  width: 80%;
+  padding: 10px;
+  background-color: #0000ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Playfair Display';font-size: 16px;
+  margin-left: 50px;
+
+}
+
+form button:hover {
+  background-color: #4d4dff;
+}
+
+form p {
+  color: #b30000;
+  font-family: 'Playfair Display';font-size: 12px;
+  font-weight: bold;
+}
+
+.formBody{
+  padding-top : 50px;
+}
