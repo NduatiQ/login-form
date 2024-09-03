@@ -2,6 +2,7 @@ import React , {useState, useEffect } from 'react';
 import { Card, Overlay, Button, Text, Container } from '@mantine/core';
 
 import { useUserStore } from '../store/userStore'; 
+import '../styles/login.css'; 
 import classes from '../components/EmailBanner.module.css'; 
 
 import { useNavigate } from 'react-router-dom';
@@ -45,7 +46,7 @@ export const Welcome: React.FC = () => {
         <div className={classes.content}>
           {showUsername ? (
           <Text size="xl" fw={700} className={classes.title}>
-            <span id="wave">👋</span> Welcome, {user?.firstName} {user?.lastName}!
+            <span className="wave">👋</span> Welcome, {user?.firstName} {user?.lastName}!
           </Text>
           ):(
             <Text size="x1" fw={700} className = {classes.title}> Loading...

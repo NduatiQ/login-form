@@ -19,14 +19,15 @@
    color: white;
 }
 
-.title {
+.content .title {
   color: var(--mantine-color-white);
   margin-bottom: calc(var(--mantine-spacing-xs) / 2);
   font-family: 'Playfair Display', serif; 
   font-size: 3rem; 
+  color: #0000ff;
 }
 
-.description {
+.content .description {
   color: var(--mantine-color-white);
   font-size: 1.5rem; 
   font-family: 'Playfair Display', serif;
@@ -37,6 +38,7 @@
   bottom: var(--mantine-spacing-xl);
   left: var(--mantine-spacing-xl); 
   margin-bottom: 50px;
+  width: 100%;
 }
 
 #action{
@@ -52,24 +54,4 @@
     #312f2f 50%,
     var(--mantine-color-gray-4) 100%
   );
-}
-
-/* making the hand to have a waving animation */
-.wave {
-  animation-name: wave-animation;  
-  animation-duration: 2.5s;        
-  animation-iteration-count: infinite;  
-  transform-origin: 70% 70%;       
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
 }

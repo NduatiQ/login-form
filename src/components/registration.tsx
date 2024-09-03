@@ -19,12 +19,12 @@ interface MyRegistrationInput {
 
 
 const validationSchema = yup.object().shape({
-  firstName: yup.string().min(3, 'First Name is too short').max(8, 'First Name is too long').required('Please fill out the first name'),
-  lastName: yup.string().min(3, 'Last Name is too short').max(8, 'Last name is too long').required('Please fill out the last name'),
-  email: yup.string().email('Invalid email Format').matches(/^[A-Za-z0-9._%+-]+@gmail\.com$/, 'Invalid email Format').required('Please fill out this section'),
-  phoneNumber: yup.string().matches(/^07[0-9]{8}$/, 'Please enter a valid mobile number').required('Please fill out the mobile number'),
-  password: yup.string().matches(/^[A-Z][0-9a-z]{7,20}$/, 'Password should start with a capital letter, have a minimum length of 8 but not exceeding 20').required('Please fill out the password'),
-  confirmPassword: yup.string().oneOf([yup.ref('password')], 'Password does not match').required('Please Re-Enter the password to confirm')
+  firstName: yup.string().required('Please fill out the first name').min(3, 'First Name is too short').max(8, 'First Name is too long'),
+  lastName: yup.string().required('Please fill out the last name').min(3, 'Last Name is too short').max(8, 'Last name is too long'),
+  email: yup.string().required('Please fill out this section').email('Invalid email Format').matches(/^[A-Za-z0-9._%+-]+@gmail\.com$/, 'Invalid email Format'),
+  phoneNumber: yup.string().required('Please fill out the mobile number').matches(/^07[0-9]{8}$/, 'Please enter a valid mobile number'),
+  password: yup.string().required('Please fill out the password').matches(/^[A-Z][0-9a-z]{7,20}$/, 'Password should start with a capital letter, have a minimum length of 8 but not exceeding 20'),
+  confirmPassword: yup.string().required('Please Re-Enter the password to confirm').oneOf([yup.ref('password')], 'Password does not match'),
 });
 
 const Register: React.FC = () => {
@@ -44,7 +44,7 @@ const Register: React.FC = () => {
   const autofillPassword = () => {
     if (loginData && loginData.logPassword) {
       setValue('password', loginData.logPassword);
-      setValue('confirmPassword', loginData.logPassword); // Also autofill confirm password if needed
+      setValue('confirmPassword', loginData.logPassword);
     }
   };
 
@@ -95,7 +95,7 @@ const Register: React.FC = () => {
             />
           </div>
 
-          <div>
+          <div >
             <label htmlFor="password">Password</label>
             <PasswordInput
               id="password"
@@ -105,9 +105,11 @@ const Register: React.FC = () => {
               {...register('password')}
               error={errors.password?.message}
             />
-          </div>
+            </div>
+          
+          <h3 >OR</h3>
 
-          <div>
+          <div className='autoBtn'>
             <Button id="autofill" onClick={autofillPassword} type="button" variant="outline" mt="md">
               Use login password
             </Button>
