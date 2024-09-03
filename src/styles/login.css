@@ -6,7 +6,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   overflow: visible; /* Hide scrollbar */
-  
+
 }
 
 h1{
@@ -84,6 +84,8 @@ form input[type="text"] {
   border: 1px solid #cccccc;
   border-radius: 5px;
   box-sizing: border-box;
+  font-family: 'Playfair Display';
+  font-size: 16px;
 }
 
 
@@ -121,7 +123,7 @@ form button:hover {
 
 form p {
   color: #b30000;
-  font-family: 'Playfair Display';font-size: 12px;
+  font-family: 'Playfair Display';font-size: 14px;
   font-weight: bold;
 }
 
