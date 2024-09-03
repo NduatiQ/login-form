@@ -25,7 +25,7 @@ export const Welcome: React.FC = () => {
     }, 2000);
 
     const emailTimer = setTimeout(() => {
-      setShowEmail(true); //show username after 2 seconds
+      setShowEmail(true); //show email and phone after 3 seconds
     }, 3000);
     
 
