@@ -1,13 +1,13 @@
 import React , {useState, useEffect } from 'react';
 import { Card, Overlay, Button, Text, Container } from '@mantine/core';
 
-import { useUserStore } from '../store/userStore'; // Import Zustand store
-import classes from '../components/EmailBanner.module.css'; // Make sure this path is correct
+import { useUserStore } from '../store/userStore'; 
+import classes from '../components/EmailBanner.module.css'; 
 import { useNavigate } from 'react-router-dom';
 
 
 export const Welcome: React.FC = () => {
-  const { user, clearUser } = useUserStore(); // Access user data from Zustand store
+  const { user, clearUser } = useUserStore(); // Accessing user data from Zustand store
   const navigate = useNavigate();
   const[showUsername, setShowUsername] = useState(false);
   const[showEmail, setShowEmail] = useState(false);
@@ -18,7 +18,7 @@ export const Welcome: React.FC = () => {
     navigate('/login'); // Redirect to the login page after logout
   };
 
-  //useEffect to set 2seconds timeout before showing user name
+  //useEffect to set delay before showing user name, email and phone number.
   useEffect(() => {
     const userNameTimer = setTimeout(() => {
       setShowUsername(true); //show username after 2 seconds

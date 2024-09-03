@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useUserStore } from '../store/userStore';
 import { useNavigate } from 'react-router-dom';
 import { Paper, TextInput, PasswordInput, Button, Title, Container } from '@mantine/core';
-import '../styles/login.css'; // Ensure this file contains the necessary styles
+import '../styles/login.css'; 
 
 interface MyRegistrationInput {
   firstName: string;
