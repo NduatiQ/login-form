@@ -6,6 +6,7 @@ import { useUserStore } from '../store/userStore';
 import { useNavigate } from 'react-router-dom';
 import { Paper, TextInput, PasswordInput, Button, Title, Container } from '@mantine/core';
 import '../styles/login.css'; 
+<link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'></link>
 
 interface MyRegistrationInput {
   firstName: string;

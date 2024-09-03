@@ -15,12 +15,15 @@
 .content {
   text-align: center;
   z-index: 1;
+   
+   color: white;
 }
 
 .title {
   color: var(--mantine-color-white);
   margin-bottom: calc(var(--mantine-spacing-xs) / 2);
-  font-size: 3rem; /* Big font size for the title */
+  font-family: 'Playfair Display';
+  font-size: 5rem; /* Big font size for the title */
 }
 
 .description {
@@ -50,11 +53,11 @@
 }
 
 /* making the hand to have a waving animation */
-.wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+#wave {
+  animation-name: wave-animation;  
+  animation-duration: 2.5s;        
+  animation-iteration-count: infinite;  
+  transform-origin: 70% 70%;       
   display: inline-block;
 }
 

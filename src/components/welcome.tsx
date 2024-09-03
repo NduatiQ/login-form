@@ -3,7 +3,9 @@ import { Card, Overlay, Button, Text, Container } from '@mantine/core';
 
 import { useUserStore } from '../store/userStore'; 
 import classes from '../components/EmailBanner.module.css'; 
+
 import { useNavigate } from 'react-router-dom';
+<link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'></link>
 
 
 export const Welcome: React.FC = () => {
