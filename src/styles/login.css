@@ -5,7 +5,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  overflow: hidden; /* Hide scrollbar */
+  overflow: visible; /* Hide scrollbar */
+  
 }
 
 h1{
@@ -37,7 +38,8 @@ form {
   position: absolute; /* Position it in relation to the viewport */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the form */
+  margin-top: -330px;
+  margin-left: -190px;
   width: 100%;
   max-width: 400px; 
   padding: 30px;
@@ -48,31 +50,46 @@ form {
   opacity: 0.8;
 }
 
+
+
 /* Style for form elements */
 form div {
   margin-bottom: 15px;
   padding-left: 20px;
   padding-right: 20px;
+  
 }
 
 form label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  font-family: 'Playfair Display';font-size: 20px;
+  font-family: 'Playfair Display';
+  font-size: 20px;
 }
 
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="text"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
+#email, #firstName, #lastName, #phoneNumber, #password, #autofill{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+
 form button {
-  width: 80%;
+  width: 100%;
   padding: 10px;
   background-color: #0000ff;
   color: white;
@@ -80,8 +97,22 @@ form button {
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Playfair Display';font-size: 16px;
-  margin-left: 50px;
+  
 
+}
+
+#register{
+  width: 100%;
+  padding: 10px;
+  background-color: #0000ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Playfair Display';font-size: 16px;
+}
+#register :hover {
+  background-color: #4d4dff;
 }
 
 form button:hover {
@@ -97,3 +128,19 @@ form p {
 .formBody{
   padding-top : 50px;
 }
+
+#autofill{
+  width: 50%;
+  padding: 10px;
+  background-color: #0000ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Playfair Display';font-size: 16px;
+  margin-left: 120px;
+  
+}
+
+
+

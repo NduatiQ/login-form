@@ -8,18 +8,19 @@ import '../styles/login.css';
 <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'></link>
 
 interface myFormInput {
-  email: string;
-  password: string;
+  logEmail: string;
+  logPassword: string;
 }
 
+
 const yupValidation = yup.object().shape({
-  email: yup.string().email('Invalid email format').required('Email is required'),
-  password: yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+  logEmail: yup.string().email('Invalid email format').required('Email is required'),
+  logPassword: yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
 });
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const { setUser } = useUserStore();
+  const { setLoginData } = useUserStore(); //using setLoginData to for login data storage
 
   const { register, handleSubmit, formState: { errors } } = useForm<myFormInput>({
     resolver: yupResolver(yupValidation),
@@ -27,7 +28,7 @@ const Login: React.FC = () => {
 
   const onSubmit: SubmitHandler<myFormInput> = (data) => {
     // Store the user data in Zustand store - state management library
-    setUser(data);
+    setLoginData(data); //store login data in zustand
 
     // Redirect to the registration page
     navigate('/registration');
@@ -43,14 +44,14 @@ const Login: React.FC = () => {
         <h2>Enter Details for registration</h2>
         <div className = "formBody"></div>
         <label>Email</label>
-        <input type="email" {...register('email')} />
-        {errors.email && <p>{errors.email.message}</p>}
+        <input type="email" {...register('logEmail')} />
+        {errors.logEmail && <p>{errors.logEmail.message}</p>}
       </div>
       
       <div>
         <label>Password</label>
-        <input type="password" {...register('password')} />
-        {errors.password && <p>{errors.password.message}</p>}
+        <input type="password" {...register('logPassword')} />
+        {errors.logPassword && <p>{errors.logPassword.message}</p>}
       </div>
 
       <button type="submit">Register</button>
