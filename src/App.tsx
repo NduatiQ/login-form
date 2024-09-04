@@ -12,6 +12,7 @@ const App: React.FC = () => {
     <MantineProvider>
     <Router>
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/welcome" element={<EmailBanner />}/>

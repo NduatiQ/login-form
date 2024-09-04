@@ -41,7 +41,7 @@ form {
   position: absolute; /* Position it in relation to the viewport */
   top: 50%;
   left: 50%;
-  margin-top: -330px;
+  margin-top: -310px;
   margin-left: -190px;
   width: 100%;
   max-width: 400px; 
